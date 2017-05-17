@@ -2,9 +2,7 @@
 Public repository for the second project
 
 ## 1. Introdução e Objetivo
-Cada vez mais, são pesquisadas técnicas para aproveitar melhor o processamento de dispositivos computacionais, procurando realizar mais operações com maior qualidade e menos tempo. Algumas dessas descobertas
-foram memória cache, diferentes números de estágios no pipeline e técnicas de branch predicition. Assim, o objetivo desse experimento é testar
-como obter melhores resultados de performance combinando as três técnicas acima.
+Cada vez mais, são pesquisadas técnicas para aproveitar melhor o processamento de dispositivos computacionais, procurando realizar mais operações com maior qualidade e menos tempo. Algumas dessas descobertas foram memória cache, diferentes números de estágios no pipeline, superescalar e técnicas de branch predicition. Assim, o objetivo desse experimento é testar como obter melhores resultados de performance combinando as quatro técnicas acima.
 
 ## 2. Roteiro
 Primeiramente, vamos escolher qual a melhor configuração da memória cache L1 unificada, semelhante ao que fizemos no exercício 2, a partir dos resultados com três programas. Escolhida essa configuração, vamos testar todas as combinações dos outros parâmetros que escolhemos:
@@ -25,12 +23,10 @@ Os tópicos abaixo descrevem como cada característica afeta o desempenho de uma
 O aumento da profundidade (ou quantidade de estágios) de um pipeline aumenta a quantidade de instruções sendo executadas simultaneamente.
 
 ### 3.3 Proc. Escalar e Superescalar
-Processador superescalar é capaz de executar mais de uma instrução por ciclo, de modo que duas ou mais instruções estão presentes em cada estágio do pipeline. Esse tipo de processador usa o conceito de
-paralelismo para poder realizar todas as suas operações necessárias de maneira mais eficiente.
+Processador superescalar é capaz de executar mais de uma instrução por ciclo, de modo que duas ou mais instruções estão presentes em cada estágio do pipeline. Esse tipo de processador usa o conceito de paralelismo para poder realizar todas as suas operações necessárias de maneira mais eficiente.
 
 ### 3.4 Branch Prediction
-Branch Prediction é uma técnica usada em pipelines para que o este não perca tanto tempo de recuperando de uma operação de branch, já que, caso exista uma instrução de branch no pipeline, todas as que estão 
-antes dessa dentro do pipeline terão que ser descarregas. Assim, fica fácil notar que seria muito mais eficiente somente colocar no pipeline instruções que realmente serão executadas.
+Branch Prediction é uma técnica usada em pipelines para que este não perca tanto tempo se recuperando de uma operação de branch, já que, caso exista uma instrução de branch no pipeline, todas as que estão antes dessa dentro do pipeline terão que ser descarregadas. Assim, fica fácil notar que seria muito mais eficiente somente colocar no pipeline instruções que realmente serão executadas.
 
 ### 3.5 Hazard
 - Estrutural: acontece quando há competição por recurso. Exemplo: se há uma única memória (sem separação entre dados e instruções), o estágio de instruction fectch (IF) do pipeline pode ser _stalled_ durante uma instrução de load/store.
