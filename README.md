@@ -28,3 +28,4 @@ Os tópicos abaixo descrevem como cada característica afeta o desempenho de uma
 
 - Controle: instruções de branch deslocam o fluxo de execução, fazendo com que a execução da próxima instrução dependa do resultado da instrução de branch. O uso de branch predictor auxilia na diminuição de ocorrências desse tipo de hazard.
 
+## Resultados e Discussão
