@@ -22,7 +22,7 @@ Os tópicos abaixo descrevem como cada característica afeta o desempenho de uma
 ### Branch Predictor
 
 ### Hazard
-- Estrutural: acontece quando há competição por recurso. Exemplo: se há uma única memória (sem separação entre dados e instruções), o estágio de instruction fectch_do pipeline pode set _stalled_ durante uma instrução de load/store.
+- Estrutural: acontece quando há competição por recurso. Exemplo: se há uma única memória (sem separação entre dados e instruções), o estágio de instruction fectch_do pipeline pode ser _stalled_ durante uma instrução de load/store.
 
 - Dados: se uma instrução depende de um dado ser atualizado em outro estágio do pipeline. Exemplo: duas instruções de adição em sequência no pipeline. O pipeline terá que ser _stalled_ por dois ciclos, caso não seja usado forwarding. Forwarding permite que uma informação seja disponibilizada com antecedência para outro estágio do pipeline.
 
