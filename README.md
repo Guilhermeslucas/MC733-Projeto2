@@ -16,13 +16,15 @@ Os tópicos abaixo descrevem como cada característica afeta o desempenho de uma
 - Tamanho da cache (Quantidade de blocos): o aumento da quantidade de blocos tende a diminuir o miss rate em conformidade, porém aumenta o hit time.
 
 ### Pipeline
+O aumento da profundidade (ou quantidade de estágios) de um pipeline aumenta a quantidade de instruções sendo executadas simultaneamente.
 
 ### Proc. Escalar e Superescalar
+Processador superescalar é capaz de executar mais de uma instrução por ciclo, de modo que duas ou mais instruções estão presentes em cada estágio do pipeline.
 
 ### Branch Predictor
 
 ### Hazard
-- Estrutural: acontece quando há competição por recurso. Exemplo: se há uma única memória (sem separação entre dados e instruções), o estágio de instruction fectch_do pipeline pode ser _stalled_ durante uma instrução de load/store.
+- Estrutural: acontece quando há competição por recurso. Exemplo: se há uma única memória (sem separação entre dados e instruções), o estágio de instruction fectch (IF) do pipeline pode ser _stalled_ durante uma instrução de load/store.
 
 - Dados: se uma instrução depende de um dado ser atualizado em outro estágio do pipeline. Exemplo: duas instruções de adição em sequência no pipeline. O pipeline terá que ser _stalled_ por dois ciclos, caso não seja usado forwarding. Forwarding permite que uma informação seja disponibilizada com antecedência para outro estágio do pipeline.
 
