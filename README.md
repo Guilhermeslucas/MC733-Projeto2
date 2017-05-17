@@ -22,3 +22,9 @@ Os tópicos abaixo descrevem como cada característica afeta o desempenho de uma
 ### Branch Predictor
 
 ### Hazard
+- Estrutural: acontece quando há competição por recurso. Exemplo: se há uma única memória (sem separação entre dados e instruções), o estágio de _instruction fectch_ do pipeline pode set _stalled_ durante uma instrução de load/store.
+
+- Dados: se uma instrução depende de um dado ser atualizado em outro estágio do pipeline. Exemplo: duas instruções de adição em sequência no pipeline. O pipeline terá que ser _stalled_ por dois ciclos, caso não seja usado forwarding. Forwarding permite que uma informação seja disponibilizada com antecedência para outro estágio do pipeline.
+
+- Controle: instruções de _branch_ deslocam o fluxo de execução, fazendo com que a execução da próxima instrução dependa do resultado da instrução de _branch_. O uso de branch predictor auxilia na diminuição de ocorrências desse tipo de hazard.
+
