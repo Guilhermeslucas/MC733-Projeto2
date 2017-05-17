@@ -9,7 +9,7 @@ Primeiramente, vamos escolher qual a melhor configuração da memória cache L1 
 tamanho de pipeline (5 e 7 estágios), processadores escalares e superescalares e técnicas de branch prediction. No caso do superescalar, vamos testar com duas instruções em paralelo. Assim, para cada combinação possível entre esses parâmetros, vamos analisar os resultados para os três programas. Os resultados finais serão mostrados no formato de gráficos e tabela. Faremos os testes com os programas 
 **Dijkstra, basicmath e qsort**.
 
-## 3 Fundamentos Teóricos
+## 3. Fundamentos Teóricos
 Os tópicos abaixo descrevem como cada característica afeta o desempenho de uma arquitetura de hardware. Enquanto os quatro primeiros (configuração de cache, tamanho de pipeline, escalar vs superescalar, branch predictor) produzem efeitos sobre a execução de um programa, o último (hazard) é um efeito em si da manipulação de configurações do hardware (ou, em nosso caso, dos parâmetros da simulação).
 
 ### 3.1 Cache
