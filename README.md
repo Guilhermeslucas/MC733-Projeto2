@@ -14,12 +14,15 @@ Os tópicos abaixo descrevem como cada característica afeta o desempenho de uma
 
 ### Cache
 - Associatividade
+
 O desempenho tende a aumentar de acordo com o aumento de associatividade. No entanto, a taxa de misses tende a se estabilizar conforme esse número de vias aumenta. Além disso, o aumento de associatividade leva a um aumento no hit time. Em geral, para caches multinível, busca-se hit time menores para cache L1, enquanto a cache L2 prioriza menores miss rates.
 
 - Tamanho dos blocos
+
 Quanto maior o tamanho dos blocos, melhor o desempenho, devido à localidade espacial. No entanto, o desempenho volta a diminuir a partir de determinado ponto, visto que haverá menos blocos, portanto maiores miss rates.
 
 - Tamanho da cache (Quantidade de blocos)
+
 O aumento da quantidade de blocos tende a diminuir o miss rate em conformidade, porém aumenta o hit time. Para configuração de cache multinível, é interessante que se utilize menor número de blocos para caches L1, e maior para a cache L2.
 
 ### Pipeline
