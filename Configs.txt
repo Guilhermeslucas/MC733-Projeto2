@@ -1,0 +1,23 @@
+Config 1:
+bool generate_traces = false;
+bool branch_always_not_taken = true;
+bool branch_predictor = false; // 1 bit predictor
+bool superscalar = false;
+
+Config 2:
+bool generate_traces = false;
+bool branch_always_not_taken = true;
+bool branch_predictor = false; // 1 bit predictor
+bool superscalar = true;
+
+Config 3:
+bool generate_traces = false;
+bool branch_always_not_taken = false;
+bool branch_predictor = true; // 1 bit predictor
+bool superscalar = true;
+
+Config 4:
+bool generate_traces = false;
+bool branch_always_not_taken = false;
+bool branch_predictor = true; // 1 bit predictor
+bool superscalar = false;
