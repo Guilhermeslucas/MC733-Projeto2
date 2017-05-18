@@ -1,5 +1,5 @@
 # MC733-Projeto2
-Public repository for the second project
+Repository for the second project
 
 ## 1. Introdução e Objetivo
 Cada vez mais, são pesquisadas técnicas para aproveitar melhor o processamento de dispositivos computacionais, procurando realizar mais operações com maior qualidade e menos tempo. Algumas dessas descobertas foram memória cache, diferentes números de estágios no pipeline, superescalar e técnicas de branch predicition. Assim, o objetivo desse experimento é testar como obter melhores resultados de performance combinando as quatro técnicas acima.
