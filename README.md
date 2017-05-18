@@ -37,7 +37,7 @@ Branch Prediction é uma técnica usada em pipelines para que este não perca ta
 
 ## 4. Experimento e Resultados
 ### 4.1 Tamanho de Cache
-Como dito no roteiro, primeiramente decidimos qual foi é a melhor configuração para a cache única, para posteriormente, com esses parâmetros, encontrar os melhores resultados para os outros componentes que estamos testando nesse experimento. Assim, segue abaixo os gráficos de **miss rate** na **cache l1** de dados, já que essa leva a um miss muito mais custoso:  
+Como dito no roteiro, primeiramente decidimos qual foi é a melhor configuração para a cache única, para posteriormente, com esses parâmetros, encontrar os melhores resultados para os outros componentes que estamos testando nesse experimento. Assim, segue abaixo os gráficos de **miss rate** na **cache l1** de dados. Decidimos considerar somente a **cache de dados**, pois a taxa de miss nessa varia bem mais, levando a uma melhor análise do problema. Além disso, o valor de miss da **cache de instruções** chegava a 0 muito rapidamente em vários testes que realizamos, não se mostrando tão interessante para uma análise. Assim:  
 
 #### 4.1.1 BasicMath
 
@@ -86,5 +86,9 @@ Como dito no roteiro, primeiramente decidimos qual foi é a melhor configuraçã
 | 1.048.576        | 0,0217 |
 
 ![SHA](graficos/sha_cache_size.jpeg) 
+
+Observando os gráficos, fica simples notar que quanto maior o **tamanho da cache** menor é a **taxa de miss**, o que justifica utilizar o maior encontrado, que nesse caso é **1.048.576** bytes.  
+
+
 
 
