@@ -35,4 +35,7 @@ Branch Prediction é uma técnica usada em pipelines para que este não perca ta
 
 - Controle: instruções de branch deslocam o fluxo de execução, fazendo com que a execução da próxima instrução dependa do resultado da instrução de branch. O uso de branch predictor auxilia na diminuição de ocorrências desse tipo de hazard.
 
-## Resultados
+## 4. Experimento e Resultados
+### 4.1 Tamanho de Cacho
+Como dito no roteiro, primeiramente decidimos qual foi é a melhor configuração para a cache única, para posteriormente, com esses parâmetros, encontrar os melhores resultados para os outros componentes que estamos testando nesse experimento. Assim, segue abaixo os gráficos de **miss rate** na **cache l1** de dados, já que essa leva a um miss muito mais custoso:  
+
