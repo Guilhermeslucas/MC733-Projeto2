@@ -72,6 +72,19 @@ Como dito no roteiro, primeiramente decidimos qual foi é a melhor configuraçã
 
 ![Djikstra](graficos/dijkstra_cache_size.jpeg)  
 
-#### 4.1.3 
+#### 4.1.3 SHA
+
+| Tamanho de Cache | Miss Rate(%)       |
+|------------------|--------------------|
+| 8.192            | 0,1125 |
+| 16.384           | 0,0323|
+| 32.768           | 0,0305|
+| 65.536           | 0,0241|
+| 131.072          | 0,0238 |
+| 262.144          | 0,0233 |
+| 524.288          | 0,0226|
+| 1.048.576        | 0,0217 |
+
+![SHA](graficos/sha_cache_size.jpeg) 
 
 
