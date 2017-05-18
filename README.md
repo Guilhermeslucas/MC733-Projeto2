@@ -56,4 +56,22 @@ Como dito no roteiro, primeiramente decidimos qual foi é a melhor configuraçã
 ![BasicMath](graficos/basic_math_cache_size.jpeg)  
 
 
-#### 4.1.2 
+#### 4.1.2 Dijsktra  
+
+| Tamanho de Cache | Miss Rate (%)      |
+|------------------|--------------------|
+| 8.192            | 0,3045 |
+| 16.384           | 0,1536 |
+| 32.768           | 0,0934 |
+| 65.536           | 0,0105 |
+| 131.072          | 0,0006 |
+| 262.144          | 0,0004 |
+| 524.288          | 0,0004 |
+| 1.048.576        | 0,0004 |  
+
+
+![Djikstra](graficos/dijkstra_cache_size.jpeg)  
+
+#### 4.1.3 
+
+
