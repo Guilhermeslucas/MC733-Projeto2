@@ -108,6 +108,16 @@ Predição: ``` 1 bit predictor```
 Predição: ``` 1 bit predictor```  
 ```Escalar```  
 
+Decidimos plotar gráficos da soma dos números de stalls e discriminá-los por meio de uma tabela que está logo acima de cada gráfico. 
+
+#### 4.2.1 SHA  
+
+|               | Configuração 1 | Configuração 2 | Configuração 3 | Configuração 4 |
+|---------------|----------------|----------------|----------------|----------------|
+| Data Stalls   | 42650721       | 219347812      | 219347812      | 42650721       |
+| Branch Stalls | 10934856       | 10934856       | 1464304        | 1464304        |
+| Jump Stalls   | 819980         | 819980         | 819980         | 819980         |  
+
 
 
 
