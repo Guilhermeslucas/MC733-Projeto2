@@ -169,8 +169,8 @@ A técnica de branch prediction tende a melhorar os hazards significativamente, 
 Após realizar todos os experimentos propostos, notamos que pequenas técnicas em um processador ajudam muito a aumentar sua performance. Porém, essas devem ser implementadas com o devido cuidado, uma vez que podem ter o efeito contrário, a exemplo de tamanho de blocos em cache e processador superescalar (que faz parte desse experimento) e se mostrou mais lento que o escalar.
 
 
-
-
+## 6. Apresentação
+https://docs.google.com/presentation/d/1gUPmOLSDjXH0IC0bTxUdj1-BqEtuHFY9Kqv6dKmnXJw/edit?usp=sharing
 
 
 
