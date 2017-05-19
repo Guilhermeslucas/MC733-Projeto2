@@ -157,7 +157,10 @@ Mais uma vez, fica claro que implementar processadores superescalares sem o devi
 Instruções: não mudaram.
 Branches corretos: alterações conforme config. de predição.
 CPI: p/ branch always not taken - melhor superescalar (config 2). p/ predictor - melhor superescalar (config 3).
-Tempo: 
+
+![Branches x Configs](MC733-Projeto2/graficos/branches-x-configs.png)
+![CPI x Configs](MC733-Projeto2/graficos/cpi-x-configs.png)
+![Wall Time x Configs](MC733-Projeto2/graficos/walltime-x-configs.png)
 
 ## 5. Conclusão
 Após realizar todos os experimentos propostos, notamos que pequenas técnicas em um processador ajudam muito a aumentar sua performance. Porém,essas devem ser implementadas com o devido cuidado, uma vez que podem ter o efeito contrário.
