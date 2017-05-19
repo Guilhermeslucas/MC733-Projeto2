@@ -30,30 +30,23 @@
 
 FILE * pFile;
 
-/* Variaveis de configuração */
-// Gerar traces
 bool generate_traces = false;
 bool branch_always_not_taken = false;
 bool branch_predictor = true; // 1 bit predictor
-bool superscalar = true;
-/* ************************ */
-
-/* Contadores */
-// Contador de Ciclos
-long cycles = 0;
-// Contador de Instruções
+bool superscalar = false;
 long intr = 0;
-
-/* Hazards */
-// Contador de stalls de dados
 long data_stalls = 0;
+long branch_hit = 0;
+long branch_miss = 0;
+long branch_stalls = 0;
+long jump_stalls = 0;
+bool last_branch_taken = false;
 
-// Salva instruções anteriores na struct instruction
 typedef struct instruction {
-	int type; // tipo da instrução (0-aritmetica, 1-load)
-	int w; // numero do registrador usado para escrita (-1 se nao for usado)
-	int r1; // numero do registrador usado para leitura (-1 se nao for usado)
-	int r2; // numero do registrador usado para leitura (-1 se nao for usado)
+	int type;
+	int w;
+	int r1;
+	int r2;
 } instruction;
 
 std::vector<instruction> pipeline(PIPELINE_SIZE - 2); // Vamos considerar somente do estágio EX em diante.
@@ -174,17 +167,6 @@ void update_data_hazard(instruction instr) {
         p_index = (p_index + 1) % 2;
     }
 }
-
-/* Branch predictor */
-// Contador de branches corretos e incorretos
-long branch_hit = 0;
-long branch_miss = 0;
-// Contador de stalls devido a branches
-long branch_stalls = 0;
-long jump_stalls = 0;
-
-// Marcador do ultimo predict
-bool last_branch_taken = false; // false se nao for taken e true se for taken
 
 void jump_taken_update() {
 	jump_stalls += 2;
@@ -309,22 +291,23 @@ void ac_behavior(end)
         printf("Always not taken\n");
     }
 
-	printf("Type = ");
-	(superscalar) ? printf("superescalar\n") : printf("escalar\n");
+	if (superscalar) {
+		printf("Type = superscalar\n");
+	} else {
+		printf("Type = superscalar\n");
+	}
 
-	// Imprime informações
 	if (superscalar) {
 		cycles /= 2;
 	}
 	printf("Cycles: %ld\n", cycles);
 	printf("Total Instructions: %ld\n", intr);
 	printf("Total Stalled Instructions: %ld\n", data_stalls + branch_stalls + jump_stalls);
-	printf("|--Data Stalls: %ld\n", data_stalls);
-	printf("|--Branch Stalls: %ld\n", branch_stalls);
-	printf("|--Jump Stalls: %ld\n", jump_stalls);
+	printf("Data Stalls: %ld\n", data_stalls);
+	printf("Branch Stalls: %ld\n", branch_stalls);
+	printf("Jump Stalls: %ld\n", jump_stalls);
 	printf("Correct Branch Predictions: %ld\n", branch_hit);
 	printf("Total Branches: %ld\n", branch_hit + branch_miss);
-	printf("CPI: %.2f\n", (float)cycles/intr);
 	dbg_printf("@@@ end behavior @@@\n");
 	if (generate_traces) {
 		fclose(pFile);
@@ -333,7 +316,6 @@ void ac_behavior(end)
 }
 
 
-/**** LOADS ****/
 //!Instruction lb behavior method.
 void ac_behavior( lb )
 {
