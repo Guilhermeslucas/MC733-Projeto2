@@ -137,7 +137,9 @@ Aqui, como no exemplo anterior, também fica muito claro como usar um processado
 |---------------|----------------|----------------|----------------|----------------|
 | Data Stalls   | 4258045941     | 1594369841     | 1594369814     | 4258045941     |
 | Branch Stalls | 116116210      | 116116210      | 102946028      | 102946028      |
-| Jump Stalls   | 78024780       | 78024780       | 78024780       | 78024780       |  
+| Jump Stalls   | 78024780       | 78024780       | 78024780       | 78024780       | 
+
+![](graficos/basic_math_stalls.jpeg) 
 
 Mais uma vez, fica claro que implementar processadores superescalares sem o devido cuidado, atrapalha muito o desempenho, ao invés de aumentar a velocidade do processamento,que é a principal busca. Além disso, o **1 bit predictor** continua sendo a melhor opção entre os dois que estamos analisando.
 
