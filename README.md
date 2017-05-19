@@ -118,7 +118,7 @@ Decidimos plotar gráficos da soma dos números de stalls e discriminá-los por 
 | Branch Stalls | 10934856       | 10934856       | 1464304        | 1464304        |
 | Jump Stalls   | 819980         | 819980         | 819980         | 819980         |  
 
-
+![SHA Stalls](graficos/sha_stalls.jpeg)
 
 
 
