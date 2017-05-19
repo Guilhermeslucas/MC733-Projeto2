@@ -89,6 +89,29 @@ Como dito no roteiro, primeiramente decidimos qual foi é a melhor configuraçã
 
 Observando os gráficos, fica simples notar que quanto maior o **tamanho da cache** menor é a **taxa de miss**, o que justifica utilizar o maior encontrado, que nesse caso é **1.048.576** bytes.  
 
+### 4.2 Análise das demais configurações  
+Aqui, vamos analisar cada programa com as diferentes configurações propostas pelo grupo. As configurações que adotamos foram as seguintes:  
+
+- **Configuração 1:** 
+Predição:``` Branch always not taken```  
+```Escalar```  
+
+- **Configuração 2:**  
+Predição: ``` Branch always not taken```  
+```Superescalar```  
+
+- **Configuração 3:**  
+Predição: ``` 1 bit predictor```  
+```Superescalar```  
+
+- **Configuração 4:**  
+Predição: ``` 1 bit predictor```  
+```Escalar```  
+
+
+
+
+
 
 
 
