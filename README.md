@@ -132,6 +132,18 @@ Aqui é notável a diferença entre as configurações 1 e 4 das demais. Essas t
 
 Aqui, como no exemplo anterior, também fica muito claro como usar um processador superescalar sem tomar os devidos cuidados de sincronização e forwards pode ser catastrófico para a performance do processador. Além disso, o **1 bit predictor** continua sendo melhor que o a tecnica de **branch not taken**.  
 
+#### 4.2.3 BasicMath
+|               | Configuração 1 | Configuração 2 | Configuração 3 | Configuração 4 |
+|---------------|----------------|----------------|----------------|----------------|
+| Data Stalls   | 4258045941     | 1594369841     | 1594369814     | 4258045941     |
+| Branch Stalls | 116116210      | 116116210      | 102946028      | 102946028      |
+| Jump Stalls   | 78024780       | 78024780       | 78024780       | 78024780       |  
+
+Mais uma vez, fica claro que implementar processadores superescalares sem o devido cuidado, atrapalha muito o desempenho, ao invés de aumentar a velocidade do processamento,que é a principal busca. Além disso, o **1 bit predictor** continua sendo a melhor opção entre os dois que estamos analisando.
+
+## 5. Conclusão
+Após realizar todos os experimentos propostos, notamos que pequenas técnicas em um processador ajudam muito a aumentar sua performance. Porém,essas devem ser implementadas com o devido cuidado, uma vez que podem ter o efeito contrário.
+
 
 
 
