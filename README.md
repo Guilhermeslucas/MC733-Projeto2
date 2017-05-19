@@ -87,7 +87,7 @@ Como dito no roteiro, primeiramente decidimos qual foi é a melhor configuraçã
 
 ![SHA](graficos/sha_cache_size.jpeg) 
 
-Observando os gráficos, fica simples notar que quanto maior o **tamanho da cache** menor é a **taxa de miss**, o que justifica utilizar o maior encontrado, que nesse caso é **1.048.576** bytes.  
+Observando os gráficos, fica simples notar que quanto maior o **tamanho da cache** menor é a **taxa de miss**, o que justifica utilizar o maior encontrado, que nesse caso é **1.048.576** bytes. Além disso, escolhemos o tamanho de bloco como **64 kb** e a associatividade de **16**.  
 
 ### 4.2 Análise das demais configurações  
 Aqui, vamos analisar cada programa com as diferentes configurações propostas pelo grupo. As configurações que adotamos foram as seguintes:  
@@ -130,7 +130,9 @@ Aqui é notável a diferença entre as configurações 1 e 4 das demais. Essas t
 
 ![](graficos/djikstra_stalls.jpeg)
 
-Aqui, como no exemplo anterior, também fica muito claro como usar um processador superescalar sem tomar os devidos cuidados de sincronização e forwards pode ser catastrófico para a performance do processador. Além disso, o **1 bit predictor** continua sendo melhor que o a tecnica de **branch not taken**.
+Aqui, como no exemplo anterior, também fica muito claro como usar um processador superescalar sem tomar os devidos cuidados de sincronização e forwards pode ser catastrófico para a performance do processador. Além disso, o **1 bit predictor** continua sendo melhor que o a tecnica de **branch not taken**.  
+
+
 
 
 
