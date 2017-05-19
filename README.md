@@ -143,6 +143,8 @@ Aqui, como no exemplo anterior, também fica muito claro como usar um processado
 
 Mais uma vez, fica claro que implementar processadores superescalares sem o devido cuidado, atrapalha muito o desempenho, ao invés de aumentar a velocidade do processamento,que é a principal busca. Além disso, o **1 bit predictor** continua sendo a melhor opção entre os dois que estamos analisando.
 
+#### 4.2.4 Resultados Gerais e Análise
+
 |                         |           |  Config.1 |            |           |  Config.2 |             |           |  Config.3 |            |           |  Config.4 |            |
 |-------------------------|:---------:|:---------:|:----------:|:---------:|:---------:|:-----------:|:---------:|:---------:|:----------:|:---------:|:---------:|:----------:|
 |                         |  Dijkstra |    SHA    |  BasicMath |  Dijkstra |    SHA    | P3BasicMath |  Dijkstra |    SHA    |  BasicMath |  Dijkstra |    SHA    |  BasicMath |
@@ -151,6 +153,11 @@ Mais uma vez, fica claro que implementar processadores superescalares sem o devi
 | Ciclos                  | 390464383 | 197986811 | 1709710347 | 305713878 | 187341951 |  1439137785 | 304077453 | 182606675 | 1432552694 | 387191533 | 188516259 | 1696540165 |
 | CPI                     |    1.75   |    1.38   |    1.57    |    1.37   |    1.30   |     1.32    |    1.36   |    1.27   |    1.31    |    1.73   |    1.31   |    1.56    |
 | Tempo                   |   13.46   |    9.06   |    79.96   |   22.31   |   14.97   |    129.23   |   21.83   |   14.77   |   132.40   |   14.67   |    9.79   |    80.49   |
+
+Instruções: não mudaram.
+Branches corretos: alterações conforme config. de predição.
+CPI: p/ branch always not taken - melhor superescalar (config 2). p/ predictor - melhor superescalar (config 3).
+Tempo: 
 
 ## 5. Conclusão
 Após realizar todos os experimentos propostos, notamos que pequenas técnicas em um processador ajudam muito a aumentar sua performance. Porém,essas devem ser implementadas com o devido cuidado, uma vez que podem ter o efeito contrário.
