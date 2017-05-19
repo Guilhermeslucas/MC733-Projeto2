@@ -119,7 +119,7 @@ Decidimos plotar gráficos da soma dos números de stalls e discriminá-los por 
 | Jump Stalls   | 819980         | 819980         | 819980         | 819980         |  
 
 ![SHA Stalls](graficos/sha_stalls.jpeg)
-Aqui é notável a diferença entre as configurações 1 e 4 das demais. Essas tem um número de stalls muito menor que as outras aprensentadas. Observando a configuração de ambos, é possível notar que o que possuem em comem é o processador escalar. Faz muito sentido o superescalar ter mais stalls, já que, da maneira que foi implementado(sem forward), quando uma instrução necessita de outra que está em outro pipeline, essa deve esperar o término do outro para completar sua operação.
+Aqui é notável a diferença entre as configurações 1 e 4 das demais. Essas tem um número de stalls muito menor que as outras aprensentadas. Observando a configuração de ambos, é possível notar que o que possuem em comem é o processador escalar. Faz muito sentido o superescalar ter mais stalls, já que, da maneira que foi implementado(sem forward), quando uma instrução necessita de outra que está em outro pipeline, essa deve esperar o término do outro para completar sua operação. Além disso, é possível notar uma melhora no desempenho quando usamos **1 bit predictor**, muito notável na diferença entre as configurações 2 e 3.
 
 #### 4.2.2 Dijkstra  
 |               | Configuração 1 | Configuração 2 | Configuração 3 | Configuração 4 |
@@ -127,6 +127,10 @@ Aqui é notável a diferença entre as configurações 1 e 4 das demais. Essas t
 | Data Stalls   | 112021848      | 332985213      | 332985213      | 112021840      |
 | Branch Stalls | 35912170       | 35912170       | 32639320       | 32639320       |
 | Jump Stalls   | 18839754       | 18839754       | 18839754       | 18839754       |  
+
+![](graficos/djikstra_stalls.jpeg)
+
+Aqui, como no exemplo anterior, também fica muito claro como usar um processador superescalar sem tomar os devidos cuidados de sincronização e forwards pode ser catastrófico para a performance do processador. Além disso, o **1 bit predictor** continua sendo melhor que o a tecnica de **branch not taken**.
 
 
 
