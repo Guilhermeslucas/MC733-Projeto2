@@ -166,7 +166,7 @@ CPI: p/ branch always not taken - melhor superescalar (config 2). p/ predictor -
 Apesar do miss rate melhorar indefinidamente conforme o aumento da cache, pode não ser prático na implementação.
 Na média, processadores superescalares tendem a melhorar o CPI, mas piorar o wall time.
 A técnica de branch prediction tende a melhorar os hazards significativamente, mas não influencia tanto no desempenho em geral.
-Após realizar todos os experimentos propostos, notamos que pequenas técnicas em um processador ajudam muito a aumentar sua performance. Porém,essas devem ser implementadas com o devido cuidado, uma vez que podem ter o efeito contrário.
+Após realizar todos os experimentos propostos, notamos que pequenas técnicas em um processador ajudam muito a aumentar sua performance. Porém, essas devem ser implementadas com o devido cuidado, uma vez que podem ter o efeito contrário, a exemplo de tamanho de blocos em cache e processador superescalar (que faz parte desse experimento) e se mostrou mais lento que o escalar.
 
 
 
