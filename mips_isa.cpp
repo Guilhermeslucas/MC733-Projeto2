@@ -291,22 +291,23 @@ void ac_behavior(end)
         printf("Always not taken\n");
     }
 
-	printf("Type = ");
-	(superscalar) ? printf("superescalar\n") : printf("escalar\n");
+	if (superscalar) {
+		printf("Type = superscalar\n");
+	} else {
+		printf("Type = superscalar\n");
+	}
 
-	// Imprime informações
 	if (superscalar) {
 		cycles /= 2;
 	}
 	printf("Cycles: %ld\n", cycles);
 	printf("Total Instructions: %ld\n", intr);
 	printf("Total Stalled Instructions: %ld\n", data_stalls + branch_stalls + jump_stalls);
-	printf("|--Data Stalls: %ld\n", data_stalls);
-	printf("|--Branch Stalls: %ld\n", branch_stalls);
-	printf("|--Jump Stalls: %ld\n", jump_stalls);
+	printf("Data Stalls: %ld\n", data_stalls);
+	printf("Branch Stalls: %ld\n", branch_stalls);
+	printf("Jump Stalls: %ld\n", jump_stalls);
 	printf("Correct Branch Predictions: %ld\n", branch_hit);
 	printf("Total Branches: %ld\n", branch_hit + branch_miss);
-	printf("CPI: %.2f\n", (float)cycles/intr);
 	dbg_printf("@@@ end behavior @@@\n");
 	if (generate_traces) {
 		fclose(pFile);
@@ -315,7 +316,6 @@ void ac_behavior(end)
 }
 
 
-/**** LOADS ****/
 //!Instruction lb behavior method.
 void ac_behavior( lb )
 {
